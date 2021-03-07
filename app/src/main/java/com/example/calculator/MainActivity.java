@@ -12,11 +12,12 @@ public class MainActivity extends AppCompatActivity {
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
     btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
 
+    EditText numberField;
+
     float mValueOne, mValueTwo;
 
     boolean edtTxtAdd, edtTxtSub, edtTxtMul,edtTxtDiv;
 
-    EditText numberField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//       Operator Buttonsboolean edtTxtAdd, edtTxtSub, edtTxtMul,edtTxtDiv;
+//       Operator Buttons boolean edtTxtAdd, edtTxtSub, edtTxtMul,edtTxtDiv;
 //       float mValueOne, mValueTwo
 //       EditText numberField;
 
@@ -162,7 +163,35 @@ public class MainActivity extends AppCompatActivity {
         btnEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueTwo
+                mValueTwo = Float.parseFloat(numberField.getText() + "");
+
+                if (edtTxtAdd == true) {
+                    numberField.setText(mValueOne + mValueTwo + "");
+                    edtTxtAdd = false;
+                }
+
+                if (edtTxtSub == true) {
+                    numberField.setText(mValueOne - mValueTwo + "");
+                    edtTxtSub = false;
+                }
+
+                if (edtTxtMul == true) {
+                    numberField.setText(mValueOne * mValueTwo + "");
+                    edtTxtMul = false;
+                }
+
+                if (edtTxtDiv == true) {
+                    numberField.setText(mValueOne / mValueTwo + "");
+                    edtTxtDiv = false;
+                }
+
+            }
+        });
+
+        btnDot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + ".");
             }
         });
 
