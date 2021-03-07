@@ -2,12 +2,15 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MyActivity";
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
     btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
@@ -116,6 +119,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnDot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + ".");
+            }
+        });
+
 //       Operator Buttons boolean edtTxtAdd, edtTxtSub, edtTxtMul,edtTxtDiv;
 //       float mValueOne, mValueTwo
 //       EditText numberField;
@@ -123,40 +133,32 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (numberField == null) {
-                    numberField.setText("");
-                } else {
-                    mValueOne = Float.parseFloat(numberField.getText() + "");
-                    edtTxtAdd = true;
-                    numberField.setText(null);
-                }
-             }
+                numberField.setText(numberField.getText() + "+");
+                //                mValueOne = Float.parseFloat(numberField.getText() + "");
+
+                Log.i(TAG, String.valueOf(numberField.getText()));
+
+            }
         });
 
         btnSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueOne = Float.parseFloat(numberField.getText() + "");
-                edtTxtSub = true;
-                numberField.setText(null);
+                numberField.setText(numberField.getText() + "-");
             }
         });
 
         btnDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueOne = Float.parseFloat(numberField.getText() + "");
-                edtTxtDiv = true;
-                numberField.setText(null);
+                numberField.setText(numberField.getText() + "/");
             }
         });
 
         btnMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueOne = Float.parseFloat(numberField.getText() + "");
-                edtTxtMul = true;
-                numberField.setText(null);
+                numberField.setText(numberField.getText() + "*");
             }
         });
 
@@ -188,12 +190,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnDot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                numberField.setText(numberField.getText() + ".");
-            }
-        });
+
 
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,5 +199,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+//                mValueOne = Float.parseFloat(numberField.getText() + "");
 }
