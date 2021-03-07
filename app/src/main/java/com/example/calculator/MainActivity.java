@@ -10,7 +10,11 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
-    btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel;
+    btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
+
+    float mValueOne, mValueTwo;
+
+    boolean edtTxtAdd, edtTxtSub, edtTxtMul,edtTxtDiv;
 
     EditText numberField;
 
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnNine = (Button) findViewById(R.id.nine);
         btnZero = (Button) findViewById(R.id.zero);
 
+        btnDot = (Button) findViewById(R.id.dot);
         btnAdd = (Button) findViewById(R.id.add);
         btnSubtract = (Button) findViewById(R.id.minus);
         btnMultiply = (Button) findViewById(R.id.multiply);
@@ -39,11 +44,134 @@ public class MainActivity extends AppCompatActivity {
 
         numberField = (EditText) findViewById(R.id.numberField);
 
+//Number Buttons
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 numberField.setText(numberField.getText() + "1");
             }
         });
+
+        btnTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "2");
+            }
+        });
+
+        btnThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "3");
+            }
+        });
+
+        btnFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "4");
+            }
+        });
+
+        btnFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "5");
+            }
+        });
+
+        btnSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "6");
+            }
+        });
+
+        btnSeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "7");
+            }
+        });
+
+        btnEight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "8");
+            }
+        });
+
+        btnNine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "9");
+            }
+        });
+
+        btnZero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberField.setText(numberField.getText() + "0");
+            }
+        });
+
+//       Operator Buttonsboolean edtTxtAdd, edtTxtSub, edtTxtMul,edtTxtDiv;
+//       float mValueOne, mValueTwo
+//       EditText numberField;
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (numberField == null) {
+                    numberField.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(numberField.getText() + "");
+                    edtTxtAdd = true;
+                    numberField.setText(null);
+                }
+             }
+        });
+
+        btnSubtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mValueOne = Float.parseFloat(numberField.getText() + "");
+                edtTxtSub = true;
+                numberField.setText(null);
+            }
+        });
+
+        btnDivision.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mValueOne = Float.parseFloat(numberField.getText() + "");
+                edtTxtDiv = true;
+                numberField.setText(null);
+            }
+        });
+
+        btnMultiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mValueOne = Float.parseFloat(numberField.getText() + "");
+                edtTxtMul = true;
+                numberField.setText(null);
+            }
+        });
+
+        btnEquals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mValueTwo
+            }
+        });
+
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+
     }
+
 }
