@@ -58,10 +58,14 @@ public class MainActivity extends AppCompatActivity {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                valuePassed = String.valueOf(numberField.getText());
                 numberField.setText("1");
-
+                valuePassed = String.valueOf(numberField.getText());
                 Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("1")) {
+                    numberField.setText(numberField.getText() + "1");
+                }
+
 //
 //                if (valuePassed.equals("0")) {
 //                    numberField.setText("1");
