@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="1dp"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/numberField"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,7 +20,7 @@
         android:id="@+id/groupOne"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,67 +169,85 @@
             app:layout_constraintTop_toTopOf="@+id/three" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/groupFour"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/groupThree"
+        app:layout_constraintStart_toStartOf="@+id/groupThree"
+        app:layout_constraintTop_toBottomOf="@+id/groupThree">
 
         <Button
             android:id="@+id/dot"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:text="." />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/equals"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@+id/zero"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/dot"
+            app:layout_constraintStart_toEndOf="@+id/dot"
+            app:layout_constraintTop_toTopOf="@+id/dot" />
 
         <Button
             android:id="@+id/zero"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
             android:layout_toRightOf="@+id/dot"
-            android:text="0" />
-
-        <Button
-            android:id="@+id/equals"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_toRightOf="@+id/zero"
-            android:text="=" />
+            android:text="0"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/equals"
+            app:layout_constraintStart_toEndOf="@+id/equals"
+            app:layout_constraintTop_toTopOf="@+id/equals" />
 
         <Button
             android:id="@+id/division"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
             android:layout_toRightOf="@+id/equals"
-            android:text="/" />
-    </RelativeLayout>
+            android:text="/"
+            app:layout_constraintBottom_toBottomOf="@+id/zero"
+            app:layout_constraintStart_toEndOf="@+id/zero"
+            app:layout_constraintTop_toTopOf="@+id/zero" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/groupFive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/groupFour"
         android:layout_centerHorizontal="true"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/equals"
-            android:layout_width="202dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:text="=" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/groupFour"
+        app:layout_constraintStart_toStartOf="@+id/groupFour"
+        app:layout_constraintTop_toBottomOf="@+id/groupFour"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/delete"
-            android:layout_width="202dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_toRightOf="@+id/equals"
-            android:text="DEL" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="DEL"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
