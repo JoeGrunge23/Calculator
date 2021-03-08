@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
-    private String operatorExtract;
+    private String operatorPassed, valuePassed;
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
     btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
@@ -48,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
         btnDel = (Button) findViewById(R.id.delete);
 
         numberField = (EditText) findViewById(R.id.numberField);
-        numberField.setText(numberField.getText() + "0");
+        numberField.setText("0");
+        valuePassed = String.valueOf(String.valueOf(numberField.getText()));
+        Log.i(TAG, valuePassed);
+//        valuePassed = String.valueOf(numberField.getText())
+
+//        Log.i(TAG, );
 
 //Number Buttons
         btnOne.setOnClickListener(new View.OnClickListener() {
@@ -139,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 //                mValueOne = Float.parseFloat(numberField.getText() + "");
 
 
-                operatorExtract = String.valueOf(Log.i(TAG, String.valueOf(numberField.getText())));
+//                operatorExtract = String.valueOf(Log.i(TAG, String.valueOf(numberField.getText())));
 
             }
         });
@@ -192,8 +197,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
 
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
