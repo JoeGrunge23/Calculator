@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
-    private String operatorPassed, valuePassed;
+    private String operatorContain, valuePassed;
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
     btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
@@ -98,56 +98,164 @@ public class MainActivity extends AppCompatActivity {
         btnThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "3");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("3");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "3");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "4");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("4");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "4");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "5");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("5");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "5");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "6");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("6");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "6");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "7");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("7");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "7");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "8");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("8");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "8");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnNine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "9");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("9");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "9");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                }
             }
         });
 
         btnZero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "0");
+                valuePassed = String.valueOf(numberField.getText());
+//                TODO: Remove inside the if else statement if no longer used:
+//                    valuePassed = String.valueOf(numberField.getText());
+//                    Log.i(TAG, valuePassed);
+
+                if (valuePassed.equals("0")) {
+                    numberField.setText("0");
+                    valuePassed = String.valueOf(numberField.getText());
+                    Log.i(TAG, valuePassed);
+                } else {
+                    numberField.setText(numberField.getText() + "0");
+                    valuePassed = String.valueOf(numberField.getText());
+
+                    Log.i(TAG, valuePassed);
+                    Log.i(TAG, valuePassed);
+
+                }
+
             }
         });
 
@@ -155,6 +263,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 numberField.setText(numberField.getText() + ".");
+                valuePassed = String.valueOf(numberField.getText());
+                Log.i(TAG, valuePassed);
             }
         });
 
