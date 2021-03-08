@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_margin="1dp"
     tools:context=".MainActivity">
 
     <EditText
@@ -16,11 +16,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/groupOne"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,117 +29,145 @@
         <Button
             android:id="@+id/seven"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="1dp"
-            android:text="7" />
+            android:layout_height="match_parent"
+            android:text="7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/eight"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_centerInParent="true"
-
-            android:layout_toRightOf="@+id/seven"
-            android:text="8" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seven"
+            app:layout_constraintTop_toTopOf="@+id/seven" />
 
         <Button
             android:id="@+id/nine"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            
-            android:layout_margin="1dp"
-            android:layout_toEndOf="@+id/eight"
-            android:text="9" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="9"
+            app:layout_constraintBottom_toBottomOf="@+id/eight"
+            app:layout_constraintStart_toEndOf="@+id/eight"
+            app:layout_constraintTop_toTopOf="@+id/eight" />
 
         <Button
             android:id="@+id/add"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_toEndOf="@+id/nine"
-            android:text="+" />
-    </RelativeLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="1dp"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/nine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nine"
+            app:layout_constraintTop_toTopOf="@+id/nine" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/groupTwo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/groupOne"
+        app:layout_constraintStart_toEndOf="@+id/groupOne"
+        app:layout_constraintStart_toStartOf="@+id/groupOne"
+        app:layout_constraintTop_toBottomOf="@+id/groupOne">
 
         <Button
             android:id="@+id/six"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:text="6" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/five"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_toRightOf="@+id/six"
-            android:text="5" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="5"
+            app:layout_constraintBottom_toBottomOf="@+id/six"
+            app:layout_constraintStart_toEndOf="@+id/six"
+            app:layout_constraintTop_toTopOf="@+id/six" />
 
         <Button
             android:id="@+id/four"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_toRightOf="@+id/five"
-            android:text="4" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="4"
+            app:layout_constraintBottom_toBottomOf="@+id/five"
+            app:layout_constraintStart_toEndOf="@+id/five"
+            app:layout_constraintTop_toTopOf="@+id/five" />
 
         <Button
             android:id="@+id/minus"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:layout_toRightOf="@+id/four"
-            android:text="-" />
-    </RelativeLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/four"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/four"
+            app:layout_constraintTop_toTopOf="@+id/four" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/groupThree"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/groupTwo"
+        app:layout_constraintStart_toStartOf="@+id/groupTwo"
+        app:layout_constraintTop_toBottomOf="@+id/groupTwo">
 
         <Button
             android:id="@+id/one"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:text="1" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/two"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/one"
-            android:text="2" />
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/one"
+            app:layout_constraintStart_toEndOf="@+id/one"
+            app:layout_constraintTop_toTopOf="@+id/one" />
 
         <Button
             android:id="@+id/three"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/two"
-            android:text="3" />
+            android:text="3"
+            app:layout_constraintBottom_toBottomOf="@+id/two"
+            app:layout_constraintStart_toEndOf="@+id/two"
+            app:layout_constraintTop_toTopOf="@+id/two" />
 
         <Button
             android:id="@+id/multiply"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
             android:layout_toRightOf="@+id/three"
-            android:text="*" />
-    </RelativeLayout>
+            android:text="*"
+            app:layout_constraintBottom_toBottomOf="@+id/three"
+            app:layout_constraintStart_toEndOf="@+id/three"
+            app:layout_constraintTop_toTopOf="@+id/three" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:id="@+id/groupFour"
