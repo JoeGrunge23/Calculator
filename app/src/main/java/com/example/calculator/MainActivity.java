@@ -58,27 +58,27 @@ public class MainActivity extends AppCompatActivity {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText("1");
                 valuePassed = String.valueOf(numberField.getText());
                 Log.i(TAG, valuePassed);
-
-                if (valuePassed.equals("1")) {
+                if (valuePassed.equals("0")) {
+                    numberField.setText("1");
+                } else {
                     numberField.setText(numberField.getText() + "1");
                 }
-
-//
-//                if (valuePassed.equals("0")) {
-//                    numberField.setText("1");
-//                } else {
-//                    numberField.setText(numberField.getText() + "1");
-//                }
              }
         });
 
         btnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "2");
+//                numberField.setText(numberField.getText() + "2");
+                valuePassed = String.valueOf(numberField.getText());
+                Log.i(TAG, valuePassed);
+                if (valuePassed.equals("0")) {
+                    numberField.setText("2");
+                } else {
+                    numberField.setText(numberField.getText() + "2");
+                }
             }
         });
 
