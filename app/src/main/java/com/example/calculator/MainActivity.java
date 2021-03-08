@@ -11,7 +11,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
-    private String operatorContain, valuePassed;
+    private String valuePassed;
+    private boolean operatorContain;
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
     btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
@@ -250,6 +251,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     numberField.setText(numberField.getText() + "0");
                     valuePassed = String.valueOf(numberField.getText());
+                    operatorContain = valuePassed.contains(".");
 
                     Log.i(TAG, valuePassed);
                     Log.i(TAG, valuePassed);
