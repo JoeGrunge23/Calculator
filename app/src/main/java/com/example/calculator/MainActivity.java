@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
+    private String operatorExtract;
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
     btnAdd, btnSubtract, btnMultiply, btnDivision, btnEquals, btnDel, btnDot;
@@ -47,12 +48,13 @@ public class MainActivity extends AppCompatActivity {
         btnDel = (Button) findViewById(R.id.delete);
 
         numberField = (EditText) findViewById(R.id.numberField);
+        numberField.setText(numberField.getText() + "0");
 
 //Number Buttons
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                numberField.setText(numberField.getText() + "1");
+                numberField.setText("1");
             }
         });
 
@@ -136,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
                 numberField.setText(numberField.getText() + "+");
                 //                mValueOne = Float.parseFloat(numberField.getText() + "");
 
-                Log.i(TAG, String.valueOf(numberField.getText()));
+
+                operatorExtract = String.valueOf(Log.i(TAG, String.valueOf(numberField.getText())));
 
             }
         });
