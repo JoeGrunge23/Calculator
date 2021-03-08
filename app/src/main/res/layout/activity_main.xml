@@ -1,4 +1,4 @@
- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,196 +7,201 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:layout_width="390dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
         android:id="@+id/numberField"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/groupOne"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/numberField"
-        android:id="@+id/groupOne">
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberField">
 
         <Button
+            android:id="@+id/seven"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="1dp"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/eight"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="7"
-            android:id="@+id/seven"/>
+            android:layout_centerInParent="true"
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_margin="1dp"
-            android:text="8"
             android:layout_toRightOf="@+id/seven"
-            android:id="@+id/eight"/>
+            android:text="8" />
 
         <Button
+            android:id="@+id/nine"
             android:layout_width="100dp"
             android:layout_height="150dp"
+            
             android:layout_margin="1dp"
-            android:text="9"
             android:layout_toEndOf="@+id/eight"
-            android:id="@+id/nine"/>
+            android:text="9" />
 
         <Button
+            android:id="@+id/add"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="+"
             android:layout_toEndOf="@+id/nine"
-            android:id="@+id/add"/>
+            android:text="+" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/groupTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-12dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/groupOne"
-        android:id="@+id/groupTwo">
+        android:visibility="gone">
 
         <Button
+            android:id="@+id/six"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="6"
-            android:id="@+id/six"/>
+            android:text="6" />
 
         <Button
+            android:id="@+id/five"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="5"
             android:layout_toRightOf="@+id/six"
-            android:id="@+id/five"/>
+            android:text="5" />
 
         <Button
+            android:id="@+id/four"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="4"
             android:layout_toRightOf="@+id/five"
-            android:id="@+id/four"/>
+            android:text="4" />
 
         <Button
+            android:id="@+id/minus"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="-"
             android:layout_toRightOf="@+id/four"
-            android:id="@+id/minus"/>
+            android:text="-" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/groupThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-12dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/groupTwo"
-        android:id="@+id/groupThree">
+        android:visibility="gone">
 
         <Button
+            android:id="@+id/one"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="1"
-            android:id="@+id/one"/>
+            android:text="1" />
 
         <Button
+            android:id="@+id/two"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="2"
             android:layout_toEndOf="@+id/one"
-            android:id="@+id/two"/>
+            android:text="2" />
 
         <Button
+            android:id="@+id/three"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="3"
             android:layout_toEndOf="@+id/two"
-            android:id="@+id/three"/>
+            android:text="3" />
 
         <Button
+            android:id="@+id/multiply"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="*"
             android:layout_toRightOf="@+id/three"
-            android:id="@+id/multiply"/>
+            android:text="*" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/groupFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-12dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/groupThree"
-        android:id="@+id/groupFour">
+        android:visibility="gone">
 
         <Button
+            android:id="@+id/dot"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="."
-            android:id="@+id/dot"/>
+            android:text="." />
 
         <Button
+            android:id="@+id/zero"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="0"
             android:layout_toRightOf="@+id/dot"
-            android:id="@+id/zero"/>
+            android:text="0" />
 
         <Button
+            android:id="@+id/equals"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="="
             android:layout_toRightOf="@+id/zero"
-            android:id="@+id/equals"/>
+            android:text="=" />
 
         <Button
+            android:id="@+id/division"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="/"
             android:layout_toRightOf="@+id/equals"
-            android:id="@+id/division"/>
+            android:text="/" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/groupFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-12dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/groupFour"
-        android:id="@+id/groupFive">
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
 
         <Button
+            android:id="@+id/equals"
             android:layout_width="202dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="="
-            android:id="@+id/equals"/>
+            android:text="=" />
 
         <Button
+            android:id="@+id/delete"
             android:layout_width="202dp"
             android:layout_height="150dp"
             android:layout_margin="1dp"
-            android:text="DEL"
             android:layout_toRightOf="@+id/equals"
-            android:id="@+id/delete"/>
+            android:text="DEL" />
 
     </RelativeLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
