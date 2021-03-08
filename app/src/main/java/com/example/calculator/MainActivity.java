@@ -251,9 +251,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     numberField.setText(numberField.getText() + "0");
                     valuePassed = String.valueOf(numberField.getText());
-                    operatorContain = valuePassed.contains(".");
-
-                    Log.i(TAG, valuePassed);
+//                    operatorContain = valuePassed.contains(".");
+//
+//                    Log.i(TAG, valuePassed);
                     Log.i(TAG, valuePassed);
 
                 }
@@ -266,7 +266,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 numberField.setText(numberField.getText() + ".");
                 valuePassed = String.valueOf(numberField.getText());
+                operatorContain  = valuePassed.contains(".");
                 Log.i(TAG, valuePassed);
+
+                if (operatorContain) {
+//                    Log.i(TAG, "Test");
+                    numberField.setText(numberField.getText());
+                } else {
+                    numberField.setText(numberField.getText() + ".");
+                }
             }
         });
 
