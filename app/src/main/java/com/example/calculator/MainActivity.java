@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         numberField = (EditText) findViewById(R.id.numberField);
         numberField.setText("0");
-        valuePassed = String.valueOf(String.valueOf(numberField.getText()));
+        valuePassed = String.valueOf(numberField.getText());
         Log.i(TAG, valuePassed);
 //        valuePassed = String.valueOf(numberField.getText())
 
