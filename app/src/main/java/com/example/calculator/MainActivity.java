@@ -346,7 +346,12 @@ public class MainActivity extends AppCompatActivity {
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            }
+                valuePassed = String.valueOf(numberField.getText());
+//                char lastValue = valuePassed.charAt(valuePassed.length() - 1);
+//                String lastValueString = String.valueOf(lastValue);
+                String lastValueString = valuePassed.substring(0, valuePassed.length()-1);
+                Log.i(TAG, lastValueString);
+             }
         });
 
     }
